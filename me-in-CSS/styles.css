@@ -1,0 +1,200 @@
+
+
+
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+h1{
+    margin-right: 200px;
+    font-size: 200px;
+    font-family: chiller,serif;
+    color: rgb(17, 0, 255);
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-direction: reverse;  
+}
+@keyframes example {
+    0%   {color:rgb(255, 0, 234); left:0px; top:0px;right: 0px;}
+    25%  {color:yellow; left:500px; top:0px;right: 0px;}
+    50%  {color:rgb(0, 255, 157); left:500px; top:500px;right: 500px;}
+    75%  {color:green; left:0px; top:500px;right: 500px;}
+    100% {color:rgb(255, 166, 0); left:0px; top:0px; right: 0;}
+  }
+
+.z-text {
+	transform: rotateX(30deg) rotateY(-30deg);
+	transition: transform 1s;
+}
+
+[data-z]:hover .z-text {
+	transform: rotateX(-30deg) rotateY(30deg);
+}
+
+.z-layer:not(:first-child) {
+	color: #bf7200;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    background: #c1a082;
+background-image: linear-gradient(90deg, #9e0142, #d13b4b, #f0704a, #fcab63, #fedc8c, #fbf8b0, #e0f3a1, #aadda2, #69bda9, #4288b5, #4288b5);
+}
+.head{
+    background: rgb(218, 184, 122);
+    width: 300px;
+    height: 350px;
+    border-radius: 70% 70% 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eyes,.eyebrows,.clip{
+ position: absolute;
+ width: 195px;
+ display: flex;
+ justify-content: space-between;
+}
+.eye{
+    background-color: white;
+    height: 40px;
+    width:55px;
+    margin: 10px;
+    border-radius: 100%;
+    border-top: 4px solid hsl(18, 48%, 5%);
+    border-bottom: 4px solid rgb(230, 164, 134);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position:relative
+}
+.eye::before{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 40px;
+    background-color: hsl(20, 8%, 23%);
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.eye::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: hsl(0, 0%, 4%);
+    border-radius: 100%;
+    margin-left: 15px;
+    margin-bottom: 7px;
+}
+.eyebrow{
+    width: 65px;
+    height: 32px;
+    border-top: 10px solid hsl(0, 1%, 17%);
+    border-radius: 100%;
+    margin-bottom: 35px;
+}
+.nose{
+    position: absolute;
+    border: 4px solid rgb(170, 145, 100);
+    width:40px;
+    height:30px;
+    border-radius: 0 0 100% 100%;
+    border-top: none;
+    margin-top: 100px;
+}
+.mouth{
+    position: absolute;
+   background-color: white;
+    width:80px;
+    height:40px; 
+    margin-top: 220px; 
+    border-radius: 20% 20% 100% 100%;
+    border: 8px solid hsl(317, 22%, 51%);
+    border-left-width:1px;
+    border-right-width:1px;
+}
+.ears{
+    z-index: -1;
+    position: absolute;
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+.ear{
+    width: 25px;
+    height: 70px;
+    border: 2px rgb(196, 166, 112);
+    background-color:rgb(201, 170, 113);
+    border-radius: 0 100% 100% 0;
+}
+.ear:first-child{
+    border-radius:100% 0 0 100% ;
+}
+.hair{
+    z-index: -1;
+    position: absolute; 
+    margin-top: 80px;
+    width:390px;
+    height: 550px;
+    border-top: 2px solid hsl(0, 1%, 17%);
+    border-radius:40% 40% 20% 20% ;
+    
+    background-color: hsl(0, 1%, 17%);
+}
+.hairs{
+    position: absolute; 
+    width:300px;
+    height: 150px;
+    margin-bottom: 300px;
+    border-radius:100% 100% 150px 50px ;
+    background-color: hsl(0, 1%, 17%);
+}
+.hairs::before,.hairs::after{
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    background-color: hsl(0, 1%, 17%);
+    height: 120px;
+    width:10px;
+    transform: translateY(100%);
+}
+.hairs::after{
+    right:0;
+}
+.earing{
+    position: absolute;
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+.earing::before,.earing::after{
+    content: '';
+    position: absolute;
+    border-radius: 50% 50% 50% 50%;
+    background-color: hsl(71, 97%, 57%);
+    height: 30px;
+    width:30px;
+    transform: translateY(100%);
+    clip-path: polygon(50% 0%,61% 35%, 98% 35%, 68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35% );
+}
+.earing::after{
+    right:0;
+}  
+.clip{
+    content: '';
+    width: 260px;
+    height: 92px;
+    border-top: 10px solid hsl(332, 97%, 55%);
+    border-radius: 100%;
+    margin-bottom: 270px;
+}
+
